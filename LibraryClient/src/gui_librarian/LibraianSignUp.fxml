@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.paint.CycleMethod?>
+
+<AnchorPane prefHeight="544.0" prefWidth="419.0" style="-fx-background-color: #fbf2ec; -fx-padding: 20;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LibrarianSignUpController">
+    <children>
+        <!-- Header -->
+        <Text layoutX="50.0" layoutY="40.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Librarian Sign Up">
+            <fill>
+                <LinearGradient startX="0" startY="0" endX="1" endY="1">
+                    <stops>
+                        <Stop offset="0.0" color="#ab5843" />
+                        <Stop offset="1.0" color="#e8d3cf" />
+                    </stops>
+                </LinearGradient>
+            </fill>
+            <effect>
+                <DropShadow radius="3.0" offsetX="2.0" offsetY="2.0" color="#ab5843" />
+            </effect>
+        </Text>
+
+        <!-- Librarian ID Section -->
+        <HBox layoutX="50.0" layoutY="70.0" spacing="10" alignment="CENTER_LEFT">
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #ab5843; -fx-min-width: 100;" text="Librarian ID:" />
+            <TextField fx:id="librarianIdField" promptText="Enter Librarian ID" style="-fx-background-color: #e8d3cf; -fx-font-size: 14px; -fx-pref-width: 200;" />
+        </HBox>
+
+        <!-- First Name Section -->
+        <HBox layoutX="50.0" layoutY="120.0" spacing="10" alignment="CENTER_LEFT">
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #ab5843; -fx-min-width: 100;" text="First Name:" />
+            <TextField fx:id="firstNameField" promptText="Enter First Name" style="-fx-background-color: #e8d3cf; -fx-font-size: 14px; -fx-pref-width: 200;" />
+        </HBox>
+
+        <!-- Last Name Section -->
+        <HBox layoutX="50.0" layoutY="170.0" spacing="10" alignment="CENTER_LEFT">
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #ab5843; -fx-min-width: 100;" text="Last Name:" />
+            <TextField fx:id="lastNameField" promptText="Enter Last Name" style="-fx-background-color: #e8d3cf; -fx-font-size: 14px; -fx-pref-width: 200;" />
+        </HBox>
+
+        <!-- Username Section -->
+        <HBox layoutX="50.0" layoutY="220.0" spacing="10" alignment="CENTER_LEFT">
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #ab5843; -fx-min-width: 100;" text="Username:" />
+            <TextField fx:id="usernameField" promptText="Enter Username" style="-fx-background-color: #e8d3cf; -fx-font-size: 14px; -fx-pref-width: 200;" />
+        </HBox>
+
+        <!-- Password Section -->
+        <HBox layoutX="50.0" layoutY="270.0" spacing="10" alignment="CENTER_LEFT">
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #ab5843; -fx-min-width: 100;" text="Password:" />
+            <PasswordField fx:id="passwordField" promptText="Enter Password" style="-fx-background-color: #e8d3cf; -fx-font-size: 14px; -fx-pref-width: 200;" />
+        </HBox>
+
+        <!-- Email Section -->
+        <HBox layoutX="50.0" layoutY="320.0" spacing="10" alignment="CENTER_LEFT">
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #ab5843; -fx-min-width: 100;" text="Email:" />
+            <TextField fx:id="emailField" promptText="Enter Email" style="-fx-background-color: #e8d3cf; -fx-font-size: 14px; -fx-pref-width: 200;" />
+        </HBox>
+
+        <!-- Error Label -->
+        <Label fx:id="errorLabel" layoutX="50.0" layoutY="370.0" style="-fx-text-fill: #ff0000; -fx-font-size: 12px;" />
+
+        <!-- Buttons -->
+        <HBox layoutX="50.0" layoutY="400.0" spacing="20" alignment="CENTER_LEFT">
+            <Button onAction="#handleSignUp" style="-fx-background-color: #ab5843; -fx-text-fill: #e8d3cf; -fx-font-weight: bold; -fx-font-size: 14px; -fx-pref-width: 120px; -fx-pref-height: 40px;" text="Sign Up" />
+            <Button onAction="#hendleGoToHome" style="-fx-background-color: #ab5843; -fx-text-fill: #e8d3cf; -fx-font-weight: bold; -fx-font-size: 14px; -fx-pref-width: 120px; -fx-pref-height: 40px;" text="Back Home" />
+        </HBox>
+
+        
+    </children>
+</AnchorPane>

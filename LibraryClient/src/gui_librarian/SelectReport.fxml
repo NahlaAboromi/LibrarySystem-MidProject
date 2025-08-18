@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.paint.CycleMethod?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="700" style="-fx-background-image: url('/BlibBackGround.jpg'); -fx-background-size: 100% 100%; -fx-background-position: center center;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SelectReportController">
+    <children>
+        <!-- Logo in Top-Right Corner -->
+        <ImageView fitHeight="50.0" fitWidth="50.0" preserveRatio="true" AnchorPane.topAnchor="10" AnchorPane.rightAnchor="10">
+            <image>
+                <Image url="@/Logo.png" />
+            </image>
+        </ImageView>
+
+        <!-- Header -->
+        <Text layoutX="50.0" layoutY="50.0" style="-fx-font-size: 28px; -fx-font-weight: bold;" text="SELECT REPORT">
+            <fill>
+                <LinearGradient startX="0" startY="0" endX="1" endY="1">
+                    <stops>
+                        <Stop offset="0.0" color="#ab5843" />
+                        <Stop offset="1.0" color="#e8d3cf" />
+                    </stops>
+                </LinearGradient>
+            </fill>
+            <effect>
+                <DropShadow radius="3.0" offsetX="2.0" offsetY="2.0" color="#ab5843" />
+            </effect>
+        </Text>
+
+        <!-- Buttons -->
+        <VBox alignment="CENTER" spacing="20" layoutX="250.0" layoutY="150.0">
+            <Button onAction="#handleBorrowingTimeReport" text="Borrowing Time Report" 
+                    style="-fx-background-color: #ab5843; -fx-text-fill: #e8d3cf; -fx-font-weight: bold; -fx-font-size: 14px; -fx-pref-width: 250px; -fx-pref-height: 40px; -fx-border-radius: 5; -fx-background-radius: 5; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2);"/>
+            <Button onAction="#handleSubscriberStatusReport" text="Subscriber Status Report" 
+                    style="-fx-background-color: #ab5843; -fx-text-fill: #e8d3cf; -fx-font-weight: bold; -fx-font-size: 14px; -fx-pref-width: 250px; -fx-pref-height: 40px; -fx-border-radius: 5; -fx-background-radius: 5; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2);"/>
+            <Button onAction="#handleBack" text="Back" 
+                    style="-fx-background-color: #ab5843; -fx-text-fill: #e8d3cf; -fx-font-weight: bold; -fx-font-size: 14px; -fx-pref-width: 250px; -fx-pref-height: 40px; -fx-border-radius: 5; -fx-background-radius: 5; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2);"/>
+        </VBox>
+    </children>
+</AnchorPane>

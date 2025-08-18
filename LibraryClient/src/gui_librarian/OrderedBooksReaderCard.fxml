@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #fbf2ec;">
+   <children>
+      <!-- TableView for Ordered Books -->
+      <TableView fx:id="orderedBooksTable" layoutX="10.0" layoutY="10.0" prefHeight="500.0" prefWidth="780.0" style="-fx-background-color: #e8d3cf; -fx-border-color: #ab5843; -fx-border-width: 2px;">
+         <columns>
+            <TableColumn fx:id="subscriberIdColumn" text="Subscriber ID" prefWidth="100.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" />
+            <TableColumn fx:id="bookIdColumn" text="Book ID" prefWidth="100.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" />
+            <TableColumn fx:id="bookNameColumn" text="Book Name" prefWidth="150.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" />
+            <TableColumn fx:id="orderDateColumn" text="Order Date" prefWidth="150.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" />
+            <TableColumn fx:id="firstReturnDateColumn" text="First Return Date" prefWidth="150.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" />
+            <TableColumn fx:id="startOrderDateColumn" text="Start Order Date" prefWidth="150.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" />
+            <TableColumn fx:id="endOrderDateColumn" text="End Order Date" prefWidth="150.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" />
+         </columns>
+      </TableView>
+
+      <!-- Error Label -->
+      <Label fx:id="errorLabel" layoutX="10.0" layoutY="520.0" text="" style="-fx-font-size: 14px; -fx-text-fill: red;" />
+
+      <!-- Return Button -->
+      <Button fx:id="returnButton" onAction="#handleGoToHome" text="Back" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #ab5843; -fx-text-fill: white; -fx-padding: 10px 20px;" 
+              AnchorPane.rightAnchor="20.0" AnchorPane.bottomAnchor="20.0" />
+   </children>
+</AnchorPane>

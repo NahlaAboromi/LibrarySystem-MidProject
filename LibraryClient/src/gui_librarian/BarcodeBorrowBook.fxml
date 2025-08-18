@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="100.0" prefWidth="100.0" style="-fx-background-image: url('/BlibBackGround.jpg'); -fx-background-size: 100% 100%; -fx-background-position: center center;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BarcodeBorrowBookController">
+    <children>
+        <!-- Logo in Top-Right Corner -->
+        <HBox alignment="TOP_RIGHT" prefWidth="800.0">
+            <ImageView fitHeight="50.0" fitWidth="50.0" preserveRatio="true">
+                <image>
+                    <Image url="@/Logo.png" />
+                </image>
+                <HBox.margin>
+                    <Insets top="10" right="10" />
+                </HBox.margin>
+            </ImageView>
+        </HBox>
+
+        <!-- Centered Content -->
+        <VBox alignment="CENTER" spacing="20" AnchorPane.topAnchor="100" AnchorPane.bottomAnchor="100" AnchorPane.leftAnchor="200" AnchorPane.rightAnchor="200">
+            <!-- Fancy Header -->
+            <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="BARCODE BORROW">
+                <fill>
+                    <LinearGradient startX="0" startY="0" endX="1" endY="1">
+                        <stops>
+                            <Stop offset="0.0" color="#ab5843" />
+                            <Stop offset="1.0" color="#e8d3cf" />
+                        </stops>
+                    </LinearGradient>
+                </fill>
+                <effect>
+                    <DropShadow radius="3.0" offsetX="2.0" offsetY="2.0" color="#ab5843" />
+                </effect>
+            </Text>
+
+            <!-- Barcode Input Section -->
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="Barcode:" style="-fx-font-size: 15px; -fx-text-fill: #ab5843;" />
+                <TextField fx:id="barcodeTextField" promptText="Enter barcode" 
+                           style="-fx-background-color: #e8d3cf; -fx-font-size: 15px; -fx-font-style: italic; -fx-padding: 5; -fx-border-radius: 5; -fx-background-radius: 5;" />
+            </HBox>
+
+            <!-- Borrow Book Button -->
+            <Button text="Borrow Book" onAction="#handleBorrowBook" 
+                    style="-fx-background-color: #ab5843; -fx-text-fill: #e8d3cf; -fx-font-weight: bold; -fx-font-size: 14px; -fx-padding: 10; -fx-border-radius: 5; -fx-background-radius: 5;"/>
+
+            <!-- Error Label -->
+            <Label fx:id="errorLabel" style="-fx-text-fill: #ff0000; -fx-font-size: 12px;" visible="false" />
+
+            <!-- Return Button -->
+            <Button text="Return" onAction="#handleReturn" 
+                    style="-fx-background-color: #ab5843; -fx-text-fill: #e8d3cf; -fx-font-weight: bold; -fx-font-size: 14px; -fx-padding: 10; -fx-border-radius: 5; -fx-background-radius: 5;"/>
+        </VBox>
+    </children>
+</AnchorPane>

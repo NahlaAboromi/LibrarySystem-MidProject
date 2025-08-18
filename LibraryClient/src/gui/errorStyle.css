@@ -1,0 +1,11 @@
+.text-field.error {
+    -fx-border-color: red; /* צבע המסגרת */
+    -fx-border-width: 2px;    /* רוחב המסגרת */
+    -fx-border-radius: 3px;   /* קצוות מעוגלים */
+    -fx-font-size: 14px;      /* גודל הטקסט */
+    -fx-text-fill: #ab5843;   /* צבע הטקסט */
+    -fx-font-weight: bold;    /* משקל הטקסט */
+    -fx-background-color: #ffffff; /* צבע הרקע */
+}
+
+

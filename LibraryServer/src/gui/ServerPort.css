@@ -1,0 +1,52 @@
+/* Root background */
+.root {
+    -fx-background-color: #fbf2ec; /* Light beige background */
+}
+
+/* TextField Styling */
+.text-field-standard {
+    -fx-background-color: #e8d3cf; /* Soft pink background for text fields */
+    -fx-font-size: 14px; /* Font size for text fields */
+}
+
+/* Button Styling */
+.button-standard {
+    -fx-background-color: #ab5843; /* Terracotta background */
+    -fx-text-fill: #e8d3cf; /* Light text color */
+    -fx-font-weight: bold; /* Bold text for the button */
+    -fx-font-size: 14px; /* Font size for buttons */
+    -fx-pref-width: 120px; /* Set preferred width */
+    -fx-pref-height: 40px; /* Set preferred height */
+}
+
+.button-standard:hover {
+    -fx-background-color: #8a4636; /* Darker shade on hover */
+}
+
+.button-standard:pressed {
+    -fx-background-color: #6d3728; /* Even darker shade when pressed */
+}
+
+/* Exit Button Styling */
+.exit-button {
+    -fx-background-color: #ab5843; /* Same terracotta background as other buttons */
+    -fx-text-fill: #e8d3cf; /* Light text color matching other buttons */
+    -fx-font-size: 14px; /* Font size for exit button */
+    -fx-font-weight: bold; /* Bold text for the exit button */
+    -fx-background-radius: 5px; /* Rounded corners for exit button */
+    -fx-padding: 10px 20px; /* Padding around exit button text */
+}
+
+.exit-button:hover {
+    -fx-background-color: #8a4636; /* Darker shade on hover, same as other buttons */
+}
+
+.exit-button:pressed {
+    -fx-background-color: #6d3728; /* Even darker shade when pressed, same as other buttons */
+}
+
+/* Error Label Styling */
+.error-label {
+    -fx-text-fill: #e8d3cf; 
+    -fx-font-size: 12px; /* Font size for error messages */
+}

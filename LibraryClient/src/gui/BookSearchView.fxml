@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="returnToSearch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="936.0" prefWidth="1522.0" style="-fx-background-color: #fbf2ec;" stylesheets="@BookSearchView.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.BookSearchController">
+    <children>
+        <!-- Logo in Top-Right Corner -->
+        <ImageView fitHeight="69.0" fitWidth="53.0" layoutX="1490.0" layoutY="34.0" preserveRatio="true" AnchorPane.rightAnchor="57.0" AnchorPane.topAnchor="34.0">
+            <image>
+                <Image url="@/Logo.png" />
+            </image>
+        </ImageView>
+        <!-- Login Button (Flexible Positioning) -->
+        <Button fx:id="loginButton" layoutX="1325.0" layoutY="53.0" onAction="#handleLogin" prefHeight="20.0" prefWidth="158.0" style="-fx-background-color: Transparent; -fx-text-fill: #ab5843 #ab5843; -fx-font-size: 15px; -fx-font-weight: bold;" text="Login" AnchorPane.rightAnchor="117.0" AnchorPane.topAnchor="53.0">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+
+        <!-- ScrollPane for Grid -->
+        <ScrollPane layoutX="-1.0" layoutY="250.0" prefHeight="557.0" prefWidth="1556.0" style="-fx-background-color: #fbf2ec;">
+            <content>
+                <GridPane fx:id="grid" layoutX="35.0" layoutY="700.0" prefHeight="813.0" prefWidth="1622.0" style="-fx-background-color: #fbf2ec;" />
+            </content>
+        </ScrollPane>
+
+        <!-- Search Field -->
+        <TextField fx:id="searchFieldByName" layoutX="55.0" layoutY="108.0" prefHeight="31.0" prefWidth="158.0" promptText="Book's Name" style="-fx-background-color: #e8d3cf;">
+            <font>
+                <Font name="System Italic" size="15.0" />
+            </font>
+        </TextField>
+
+        <!-- Search Button -->
+        <Button fx:id="ButtonSearchByName" layoutX="192.0" layoutY="109.0" mnemonicParsing="false" onAction="#handleSearchByName" prefHeight="15.0" prefWidth="80.0" style="-fx-background-color: #ab5843;" text="search" textFill="#e8d3cf">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+
+        <!-- Clean Button -->
+        <Button fx:id="ButtonReturn" layoutX="315.0" layoutY="149.0" mnemonicParsing="false" onAction="#handleReturn" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #fbf2ec;" text="Clean" textFill="#ab5843">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Button>
+
+        <!-- Back to Home Button -->
+        <Button fx:id="ButtongoHome" layoutX="1099.0" layoutY="83.0" onAction="#handleGoToHome" prefHeight="30.0" prefWidth="97.0" style="-fx-background-color: #ab5843;" styleClass="button-standard" text="Back" textFill="#e8d3cf" wrapText="true">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Button>
+
+        <!-- Error Label -->
+        <Label fx:id="errorLabel" layoutX="104.0" layoutY="198.0" prefHeight="31.0" prefWidth="242.0" />
+
+        <!-- Search Category ChoiceBox -->
+        <ChoiceBox fx:id="searchCategory" layoutX="289.0" layoutY="108.0" onAction="#searchBookByCategory" prefHeight="32.0" prefWidth="139.0" style="-fx-background-color: #e8d3cf; " />
+      <Text layoutX="593.0" layoutY="50.0" style="-fx-font-size: 40px; -fx-font-weight: bold;" text="OUR COLLECTION">
+         <fill>
+            <LinearGradient endX="1" endY="1" startX="0" startY="0">
+               <stops>
+                  <Stop color="#ab5843" offset="0.0" />
+                  <Stop color="#e8d3cf" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+         <effect>
+            <DropShadow color="#ab5843" offsetX="2.0" offsetY="2.0" radius="3.0" />
+         </effect>
+      </Text>
+      <TextField fx:id="searchFieldByDescription" layoutX="55.0" layoutY="149.0" prefHeight="31.0" prefWidth="145.0" promptText="Book's Description" style="-fx-background-color: #e8d3cf;">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </TextField>
+      <Button fx:id="ButtonSearchByDescription" layoutX="192.0" layoutY="149.0" mnemonicParsing="false" onAction="#handleSearchByDescription" prefHeight="15.0" prefWidth="80.0" style="-fx-background-color: #ab5843;" text="search" textFill="#e8d3cf">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

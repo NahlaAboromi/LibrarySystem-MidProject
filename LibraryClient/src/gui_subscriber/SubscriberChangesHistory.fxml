@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane prefHeight="620.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" style="-fx-background-color: #fbf2ec;">
+    <children>
+        <!-- TableView for Password History -->
+       <TableView fx:id="changesHistoryTable" layoutX="10.0" layoutY="10.0" prefHeight="550.0" prefWidth="780.0" style="-fx-background-color: #e8d3cf; -fx-border-color: #ab5843; -fx-border-width: 2px;">
+    <columns>
+        <TableColumn fx:id="changeHistoryIdColumn" text="Change History ID" prefWidth="150.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" />
+        <TableColumn fx:id="subscriberIdColumn" text="Subscriber ID" prefWidth="150.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" />
+        <TableColumn fx:id="changeTypeColumn" text="Change Type" prefWidth="100.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" />
+        <TableColumn fx:id="oldValueColumn" text="Old Value" prefWidth="250.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" />
+        <TableColumn fx:id="newValueColumn" text="New Value" prefWidth="250.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" />
+        <TableColumn fx:id="changeDateColumn" text="Change Date" prefWidth="150.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" />
+    </columns>
+</TableView>
+
+	<Button fx:id="backButton" text="Back"
+			onAction="#handleBackButton" layoutX="10.0" layoutY="570.0"
+			style="
+        -fx-background-color: #ab5843;
+        -fx-text-fill: white;
+        -fx-font-weight: bold;
+        -fx-font-size: 14px;
+        -fx-background-radius: 20;
+        -fx-padding: 8 15 8 15;
+    " />
+        <!-- Error Label -->
+        <Label fx:id="errorLabel" layoutX="10.0" layoutY="570.0" text="" style="-fx-font-size: 14px; -fx-text-fill: red;" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('/BlibBackGround.jpg'); -fx-background-size: 150% 150%; -fx-background-position: center center;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="controllers.MenuOfSubscriberHistoryController">
+    <!-- Logo in Top-Right Corner (Locked Position) -->
+    <ImageView fitHeight="50.0" fitWidth="50.0" preserveRatio="true" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10">
+        <image>
+            <Image url="@/Logo.png" />
+        </image>
+    </ImageView>
+
+    <!-- Header Label -->
+    <Label fx:id="headerLabel" alignment="CENTER" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="SELECT ACTIVITY HISTORY" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="20">
+        <textFill>
+            <LinearGradient endX="1" endY="1" startX="0" startY="0">
+                <stops>
+                    <Stop color="#ab5843" offset="0.0" />
+                    <Stop color="#e8d3cf" offset="1.0" />
+                </stops>
+            </LinearGradient>
+        </textFill>
+        <effect>
+            <DropShadow color="#ab5843" offsetX="2.0" offsetY="2.0" radius="3.0" />
+        </effect>
+    </Label>
+    
+    <!-- Buttons for Different History Options -->
+    <Button fx:id="borrowingHistoryButton" layoutX="175.0" layoutY="92.0" onAction="#handleBorrowingHistory" style="-fx-background-color: #ab5843; -fx-text-fill: #e8d3cf; -fx-font-weight: bold; -fx-font-size: 14px; -fx-pref-width: 250px; -fx-pref-height: 40px;" text="Borrowing History" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="92.0" />
+    
+    <Button fx:id="orderHistoryButton" layoutX="175.0" layoutY="139.0" onAction="#handleOrderHistory" style="-fx-background-color: #ab5843; -fx-text-fill: #e8d3cf; -fx-font-weight: bold; -fx-font-size: 14px; -fx-pref-width: 250px; -fx-pref-height: 40px;" text="Order History" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="139.0" />
+    
+    <Button fx:id="passwordChangeHistoryButton" layoutX="175.0" layoutY="191.0" onAction="#handlePasswordChangeHistory" style="-fx-background-color: #ab5843; -fx-text-fill: #e8d3cf; -fx-font-weight: bold; -fx-font-size: 14px; -fx-pref-width: 250px; -fx-pref-height: 40px;" text="Details Change History" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="191.0" />
+    
+    <Button fx:id="loanExtensionHistoryButton" layoutX="175.0" layoutY="239.0" onAction="#handleLoanExtensionHistory" style="-fx-background-color: #ab5843; -fx-text-fill: #e8d3cf; -fx-font-weight: bold; -fx-font-size: 14px; -fx-pref-width: 250px; -fx-pref-height: 40px;" text="Loan Extension History" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="239.0" />
+    
+    <Button fx:id="returnBookHistoryButton" layoutX="175.0" layoutY="290.0" onAction="#handleReturnBookHistory" style="-fx-background-color: #ab5843; -fx-text-fill: #e8d3cf; -fx-font-weight: bold; -fx-font-size: 14px; -fx-pref-width: 250px; -fx-pref-height: 40px;" text="Return Book History" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="290.0" />
+    
+    <Button fx:id="backToMenuButton" layoutX="175.0" layoutY="338.0" onAction="#handleBackToMenu" style="-fx-background-color: #ab5843; -fx-text-fill: #e8d3cf; -fx-font-weight: bold; -fx-font-size: 14px; -fx-pref-width: 250px; -fx-pref-height: 40px;" text="Back to Menu" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="338.0" />
+</AnchorPane>

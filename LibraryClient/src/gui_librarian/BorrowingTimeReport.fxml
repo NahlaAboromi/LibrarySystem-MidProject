@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.chart.BarChart?>
+
+<AnchorPane prefHeight="729.0" prefWidth="938.0" style="-fx-background-color: #fbf2ec;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BorrowingTimeReportController">
+
+    <children>
+        <!-- Logo in Top-Right Corner -->
+        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="841.0" layoutY="25.0" preserveRatio="true">
+            <image>
+                <Image url="@/Logo.png" />
+            </image>
+        </ImageView>
+
+        <!-- Header Label -->
+        <Label layoutX="263.0" layoutY="30.0" prefHeight="40.0" prefWidth="400.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="BORROWING TIME ANALYSIS">
+            <textFill>
+                <LinearGradient endX="1" endY="1" startX="0" startY="0">
+                    <stops>
+                        <Stop color="#ab5843" offset="0.0" />
+                        <Stop color="#e8d3cf" offset="1.0" />
+                    </stops>
+                </LinearGradient>
+            </textFill>
+            <effect>
+                <DropShadow color="#ab5843" offsetX="2.0" offsetY="2.0" radius="3.0" />
+            </effect>
+        </Label>
+
+        <!-- Year ChoiceBox -->
+        <Label layoutX="130.0" layoutY="100.0" prefHeight="30.0" prefWidth="80.0" style="-fx-font-size: 14px; -fx-text-fill: #ab5843;" text="Year:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <ChoiceBox fx:id="yearChoiceBox" layoutX="200.0" layoutY="100.0" prefWidth="150.0" style="-fx-background-color: #e8d3cf; -fx-font-size: 14px;" />
+
+        <!-- Month ChoiceBox -->
+        <Label layoutX="130.0" layoutY="150.0" prefHeight="30.0" prefWidth="80.0" style="-fx-font-size: 14px; -fx-text-fill: #ab5843;" text="Month:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <ChoiceBox fx:id="monthChoiceBox" layoutX="200.0" layoutY="150.0" prefWidth="150.0" style="-fx-background-color: #e8d3cf; -fx-font-size: 14px;" />
+
+        <!-- View Button -->
+        <Button layoutX="389.0" layoutY="180.0" onAction="#handleView" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #ab5843;" text="View" textFill="#e8d3cf">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+
+        <!-- Tab Pane -->
+        <TabPane layoutX="30.0" layoutY="281.0" prefHeight="389.0" prefWidth="866.0" style="-fx-background-color: #e8d3cf;">
+            <tabs>
+                <!-- Regular vs Late Returns Tab -->
+              
+
+<Tab closable="false" style="-fx-background-color: #f5e5dc; -fx-text-base-color: #ab5843; -fx-border-color: #ab5843; -fx-border-width: 2px; -fx-border-radius: 5px; -fx-padding: 5px 10px;" text="Regular vs Late Returns">
+
+  
+                    <content>
+                        <BarChart fx:id="barChart" animated="true" layoutX="50.0" layoutY="260.0" prefHeight="400.0" prefWidth="900.0" style="-fx-background-color: #e8d3cf; -fx-border-color: #ab5843; -fx-border-width: 2;" title="Regular Borrowing Time vs Late Returns">
+                            <xAxis>
+                                <CategoryAxis label="Categories" tickLabelRotation="-45" fx:id="xAxis">
+                                    <tickLabelFont>
+                                        <Font name="System Bold" size="12.0" />
+                                    </tickLabelFont>
+                                </CategoryAxis>
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis fx:id="yAxis" label="Number of Days (Regular + Late)" tickUnit="5" upperBound="30" />
+                            </yAxis>
+                        </BarChart>
+                    </content>
+                </Tab>
+
+                <!-- Most Borrowed Books Tab -->
+                <Tab closable="false" style="-fx-background-color: #f0e0d6; -fx-text-base-color: #ab5843;-fx-border-color: #ab5843;-fx-border-width: 2px;-fx-border-radius: 5px; -fx-padding: 5px 10px;" text="Most Borrowed Books">
+                    <content>
+                        <StackedBarChart fx:id="mostBorrowedChart" animated="true" layoutX="50.0" layoutY="570.0" prefHeight="400.0" prefWidth="900.0" style="-fx-background-color: #e8d3cf; -fx-border-color: #ab5843; -fx-border-width: 2;" title="Top 10 Most Borrowed Books">
+                            <xAxis>
+                                <CategoryAxis label="Books" tickLabelRotation="-60">
+                                    <tickLabelFont>
+                                        <Font name="System Bold" size="8.0" />
+                                    </tickLabelFont>
+                                </CategoryAxis>
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis label="Number of Borrows" />
+                            </yAxis>
+                        </StackedBarChart>
+                    </content>
+                </Tab>
+
+                <!-- Most Late Returns Tab -->
+                <Tab closable="false" style="-fx-background-color: #f0e0d6; -fx-text-base-color: #ab5843;-fx-border-color: #ab5843;-fx-border-width: 2px;-fx-border-radius: 5px; -fx-padding: 5px 10px;" text="Most Late Returns">
+                    <content>
+                        <StackedBarChart fx:id="mostLateChart" animated="true" layoutX="620.0" layoutY="570.0" prefHeight="400.0" prefWidth="900.0" style="-fx-background-color: #e8d3cf; -fx-border-color: #ab5843; -fx-border-width: 2;" title="Top 10 Most Late Returns">
+                            <xAxis>
+                                <CategoryAxis label="Books" tickLabelRotation="-60">
+                                    <tickLabelFont>
+                                        <Font name="System Bold" size="8.0" />
+                                    </tickLabelFont>
+                                </CategoryAxis>
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis autoRanging="false" label="Number of Late Returns" lowerBound="0" tickUnit="2.5" upperBound="25" />
+                            </yAxis>
+                        </StackedBarChart>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+
+        <!-- Back Button -->
+        <Button layoutX="14.0" layoutY="677.0" onAction="#handleBack" prefHeight="38.0" prefWidth="116.0" style="-fx-background-color: #ab5843;" text="Back" textFill="#e8d3cf">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+
+        <!-- Error Label -->
+        <Label fx:id="errorLabel" layoutX="297.0" layoutY="225.0" prefHeight="30.0" prefWidth="424.0" style="-fx-text-fill: red; -fx-font-size: 14px;" text="" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LibrarianMessagesController" style="-fx-background-color: #fbf2ec;">
+    <children>
+        <TableView fx:id="messagesTable" layoutX="14.0" layoutY="14.0" prefHeight="520.0" prefWidth="970.0" style="-fx-background-color: #e8d3cf; -fx-border-color: #ab5843; -fx-border-width: 2px;">
+            <columns>
+                <TableColumn fx:id="messageTextColumn" prefWidth="750.0" text="Message" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" />
+                <TableColumn fx:id="messageDateColumn" prefWidth="220.0" text="Date" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" />
+            </columns>
+        </TableView>
+        
+        <Button fx:id="homeButton" text="Back" onAction="#handleGoToHome" layoutX="14.0" layoutY="550.0"
+            style="-fx-background-color: #ab5843; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px; -fx-background-radius: 20; -fx-padding: 8 15 8 15;" />
+    </children>
+</AnchorPane>

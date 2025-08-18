@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="438.0" prefWidth="535.0" style="-fx-background-image: url('/BlibBackGround.jpg'); -fx-background-size: 100% 100%;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SubscriberLoginController">
+
+    <!-- VBox for Content -->
+    <VBox alignment="CENTER" layoutX="-4.0" prefHeight="444.0" prefWidth="547.0" spacing="15" style="-fx-padding: 20;" AnchorPane.leftAnchor="-4.0" AnchorPane.rightAnchor="-8.0" AnchorPane.topAnchor="0.0">
+        <!-- Fancy Header -->
+        <Text style="-fx-font-size: 24px; -fx-font-weight: bold;" text="SUBSCRIBER LOGIN">
+            <fill>
+                <LinearGradient endX="1" endY="1" startX="0" startY="0">
+                    <stops>
+                        <Stop color="#ab5843" offset="0.0" />
+                        <Stop color="#e8d3cf" offset="1.0" />
+                    </stops>
+                </LinearGradient>
+            </fill>
+            <effect>
+                <DropShadow color="#ab5843" offsetX="2.0" offsetY="2.0" radius="3.0" />
+            </effect>
+        </Text>
+        
+        <!-- GridPane for Labels and Input Fields -->
+        <GridPane alignment="CENTER" hgap="10" vgap="10">
+            <!-- Subscriber ID -->
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #ab5843;" text="Subscriber ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="subscriberIDField" prefWidth="200" promptText="Enter Subscriber ID" style="-fx-background-color: #e8d3cf; -fx-font-size: 14px; -fx-padding: 5; -fx-font-style: italic; -fx-border-radius: 5; -fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            
+            <!-- Username -->
+            <Label prefHeight="20.0" prefWidth="85.0" style="-fx-font-size: 14px; -fx-text-fill: #ab5843;" text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="usernameField" prefWidth="200" promptText="Enter Username" style="-fx-background-color: #e8d3cf; -fx-font-size: 14px; -fx-padding: 5; -fx-font-style: italic; -fx-border-radius: 5; -fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            
+            <!-- Password -->
+            <Label prefHeight="20.0" prefWidth="83.0" style="-fx-font-size: 14px; -fx-text-fill: #ab5843;" text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <PasswordField fx:id="passwordField" prefWidth="200" promptText="Enter Password" style="-fx-background-color: #e8d3cf; -fx-font-size: 14px; -fx-padding: 5; -fx-font-style: italic; -fx-border-radius: 5; -fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            
+            <!-- Column and Row Constraints -->
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" />
+                <ColumnConstraints halignment="LEFT" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+
+        <!-- Error Label -->
+        <Label fx:id="errorLabel" style="-fx-text-fill: #ab5843; -fx-font-size: 12px; -fx-font-weight: bold;" />
+
+        <!-- Login Button -->
+        <Button onAction="#handleLogin" prefWidth="200" style="-fx-background-color: #ab5843; -fx-text-fill: #e8d3cf; -fx-font-weight: bold; -fx-font-size: 14px; -fx-pref-height: 40px; -fx-padding: 10; -fx-border-radius: 5; -fx-background-radius: 5;" text="Login">
+            <effect>
+                <DropShadow color="#ab5843" offsetX="2.0" offsetY="2.0" radius="3.0" />
+            </effect>
+        </Button>
+
+        <!-- Forgot Password Label -->
+        <Label style="-fx-font-size: 12px; -fx-text-fill: #ab5843;" text="Forgot your password?" />
+
+        <!-- Reset Password Button -->
+        <Button onAction="#handleSubsceiberResetPassword" prefWidth="200" style="-fx-background-color: #ab5843; -fx-text-fill: #e8d3cf; -fx-font-weight: bold; -fx-font-size: 14px; -fx-pref-height: 40px; -fx-padding: 10; -fx-border-radius: 5; -fx-background-radius: 5;" text="Reset Password">
+            <effect>
+                <DropShadow color="#ab5843" offsetX="2.0" offsetY="2.0" radius="3.0" />
+            </effect>
+        </Button>
+
+        <!-- Go to Home Button -->
+        <Button onAction="#hendleGoToHome" prefWidth="200" style="-fx-background-color: #ab5843; -fx-text-fill: #e8d3cf; -fx-font-weight: bold; -fx-font-size: 14px; -fx-pref-height: 40px; -fx-padding: 10; -fx-border-radius: 5; -fx-background-radius: 5;" text="Go to Home">
+            <effect>
+                <DropShadow color="#ab5843" offsetX="2.0" offsetY="2.0" radius="3.0" />
+            </effect>
+        </Button>
+    </VBox>
+    <!-- Logo in Top-Right Corner -->
+    <ImageView fitHeight="50.0" fitWidth="50.0" preserveRatio="true" AnchorPane.topAnchor="10.0" AnchorPane.rightAnchor="10.0">
+        <image>
+            <Image url="@/Logo.png" />
+        </image>
+    </ImageView>
+</AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1000.0" style="-fx-background-color: #fbf2ec;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <!-- TableView for Loan Extension History -->
+        <TableView fx:id="loanExtensionTable" layoutX="10.0" layoutY="10.0" prefHeight="650.0" prefWidth="1200.0" style="-fx-background-color: #e8d3cf; -fx-border-color: #ab5843; -fx-border-width: 2px;">
+            <columns>
+                <TableColumn fx:id="extensionIdColumn" prefWidth="120.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" text="Extension ID" />
+                <TableColumn fx:id="subscriberIdColumn" prefWidth="120.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" text="Subscriber ID" />
+                <TableColumn fx:id="bookIdColumn" prefWidth="120.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" text="Book ID" />
+                <TableColumn fx:id="bookNameColumn" prefWidth="200.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" text="Book Name" />
+                <TableColumn fx:id="authorColumn" prefWidth="200.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" text="Author" />
+                <TableColumn fx:id="originalReturnDateColumn" prefWidth="180.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" text="Original Return Date" />
+                <TableColumn fx:id="newReturnDateColumn" prefWidth="180.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" text="New Return Date" />
+                <TableColumn fx:id="extensionDateColumn" prefWidth="180.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" text="Extension Date" />
+                <TableColumn fx:id="extensionStatusColumn" prefWidth="120.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" text="Status" />
+             <TableColumn fx:id="librarianNameColumn" prefWidth="150.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" text="Librarian Name" />
+            <TableColumn fx:id="rejectionReasonColumn" prefWidth="500.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" text="Rejection Reason" />
+            
+            </columns>
+        </TableView>
+	<Button fx:id="backButton" layoutX="34.0" layoutY="668.0" onAction="#handleBackButton" style="         -fx-background-color: #ab5843;         -fx-text-fill: white;         -fx-font-weight: bold;         -fx-font-size: 14px;         -fx-background-radius: 20;         -fx-padding: 8 15 8 15;     " text="Back" />
+        <!-- Error Label -->
+        <Label fx:id="errorLabel" layoutX="10.0" layoutY="670.0" style="-fx-font-size: 14px; -fx-text-fill: red;" text="" />
+    </children>
+</AnchorPane>

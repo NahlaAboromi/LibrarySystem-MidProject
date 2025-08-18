@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0"
+            style="-fx-background-image: url('/BlibBackGround.jpg'); -fx-background-size: cover; -fx-background-position: center center; -fx-background-size: 100% 100%;"
+            xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ClientConnectionController">
+   <children>
+      <!-- Logo -->
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="330.0" layoutY="10.0" preserveRatio="true">
+         <image>
+            <Image url="@/Logo.png"/>
+         </image>
+      </ImageView>
+
+      <Label layoutX="73.0" layoutY="50.0" text="Enter IP Address:" 
+             style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-alignment: center; -fx-padding: 5 0 0 0; -fx-text-fill: #333;"/>
+      <TextField fx:id="id_IP" layoutX="73.0" layoutY="80.0" prefHeight="24.0" prefWidth="250.0" promptText="IP Address" 
+                 style="-fx-background-color: #e8d3cf; -fx-font-size: 15px; -fx-font-style: italic;"/>
+      
+      <Label layoutX="73.0" layoutY="120.0" text="Enter Port:" 
+             style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-alignment: center; -fx-padding: 5 0 0 0; -fx-text-fill: #333;"/>
+      <TextField fx:id="portField" layoutX="73.0" layoutY="150.0" prefHeight="24.0" prefWidth="250.0" promptText="Port" 
+                 style="-fx-background-color: #e8d3cf; -fx-font-size: 15px; -fx-font-style: italic;"/>
+      
+      <Button fx:id="SENDID" layoutX="73.0" layoutY="200.0" mnemonicParsing="false" onAction="#Connect" prefHeight="30.0" prefWidth="100.0" text="Connect" 
+              style="-fx-background-color: #ab5843; -fx-text-fill: #e8d3cf; -fx-font-weight: bold; -fx-font-size: 14px;"/>
+      
+      <Label fx:id="errorLabel" layoutX="73.0" layoutY="240.0" prefHeight="31.0" prefWidth="250.0" 
+             style="-fx-text-fill: #ab5843; -fx-font-size: 12px;"/>
+   </children>
+</AnchorPane>

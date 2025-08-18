@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #fbf2ec;">
+   <children>
+      <!-- TableView for Borrowed Books -->
+      <TableView fx:id="borrowedBooksTable" layoutX="10.0" layoutY="10.0" prefHeight="500.0" prefWidth="780.0" style="-fx-background-color: #e8d3cf; -fx-border-color: #ab5843; -fx-border-width: 2px;">
+         <columns>
+            <TableColumn fx:id="subscriberIdColumn" text="Subscriber ID" prefWidth="100.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" />
+            <TableColumn fx:id="bookIdColumn" text="Book ID" prefWidth="100.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" />
+            <TableColumn fx:id="bookNameColumn" text="Book Name" prefWidth="150.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" />
+            <TableColumn fx:id="authorColumn" text="Author" prefWidth="150.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" />
+            <TableColumn fx:id="borrowDateColumn" text="Borrow Date" prefWidth="150.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" />
+            <TableColumn fx:id="returnDateColumn" text="Return Date" prefWidth="150.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #ab5843;" />
+         </columns>
+      </TableView>
+
+      <!-- Extension Button -->
+<Button fx:id="confirmButton" layoutX="350.0" layoutY="520.0"
+        onAction="#handleExtension"
+        prefHeight="40.0"
+        prefWidth="100.0"
+        style="-fx-background-color: #ab5843; -fx-text-fill: #e8d3cf; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 10; -fx-border-radius: 5; -fx-background-radius: 5;"
+        text="Extension"/>
+
+      <!-- Error Label -->
+      <Label fx:id="errorLabel" layoutX="10.0" layoutY="570.0" text="" style="-fx-font-size: 14px; -fx-text-fill: red;" />
+            <!-- Return Button -->
+      <Button fx:id="returnButton" onAction="#handleGoToHome" text="Back" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #ab5843; -fx-text-fill: white; -fx-padding: 10px 20px;" 
+              AnchorPane.rightAnchor="20.0" AnchorPane.bottomAnchor="20.0" />
+   </children>
+</AnchorPane>
